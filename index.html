@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Profissional</title>
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/522/522506.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/522/522506.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://cdn-icons-png.flaticon.com/512/522/522506.png"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#4caf50" />
+    <!-- JS -->
+    <script src="js/scripts.js" defer></script>
+  </head>
+  <body>
+    <div id="calculadora">
+      <div id="display">
+        <input
+          type="text"
+          id="displayInput"
+          aria-label="Visor da calculadora"
+          disabled
+        />
+      </div>
+
+      <div id="teclado">
+        <button class="acao">AC</button>
+        <button class="acao">C</button>
+        <button class="operador">%</button>
+        <button class="operador">/</button>
+
+        <button class="num">7</button>
+        <button class="num">8</button>
+        <button class="num">9</button>
+        <button class="operador">*</button>
+
+        <button class="num">4</button>
+        <button class="num">5</button>
+        <button class="num">6</button>
+        <button class="operador">-</button>
+
+        <button class="num">1</button>
+        <button class="num">2</button>
+        <button class="num">3</button>
+        <button class="operador">+</button>
+
+        <button class="num zero">0</button>
+        <button class="ponto">.</button>
+        <button class="igual">=</button>
+      </div>
+    </div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('js/service-worker.js');
+      }
+    </script>
+  </body>
+</html>
